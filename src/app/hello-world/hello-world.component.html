@@ -1,0 +1,38 @@
+<!-- 
+    <h1 (mouseover)="onMouseOver()">Olá Turma!</h1>
+<input type="text" [newTask]="value"> -->
+
+ <div class="mother">
+     
+     <nav>
+         <!-- <a href="/List"></a> -->
+         <!-- | -->
+         <!-- <a href="/user">User</a> -->
+         <div>
+             <p>Taferas La List</p>
+         </div>
+     </nav>
+     <div class="container">  
+         <div class="newTask">
+            <input type="text" [(ngModel)]="newTask" />
+            <button (click)="newTaskAdd()">+Add+</button>
+            <input type="text" [(ngModel)]="delTask" />
+            <button (click)="deleteTask()">+Del+</button>
+            <button class="ripListBtn" (click)="deleteAllTasks()">!RipList!</button>
+            <ul>
+                @for (task of tasks; track task.task){
+                    <li>{{task.task}}
+                        <span>{{task.id}}</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- <ul>
+    @for (ingredient of ingredientList; track ingredient.name) {
+      <li>{{ ingredient.quantity }} - {{ ingredient.name }}</li>
+    }
+  </ul>
+ -->
+  

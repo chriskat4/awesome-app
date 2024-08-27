@@ -1,0 +1,33 @@
+<div class="mother">
+    <nav>
+        <div class="wrapnav">
+            <a href="/">Home</a>
+            <a href="/list">List</a>
+        </div>
+    </nav>
+
+    <div class="form">
+        <div>
+            <label for="emailRegister">Email</label>
+            <input id="emailRegister" type="text" [(ngModel)]="emailRegister" />
+            
+
+            <label for="nameRegister">Name</label>
+            <input id="nameRegister" type="text" [(ngModel)]="nameRegister" />
+
+            <label for="passwordRegister">Password</label>
+            <input id="passwordRegister" type="text" [(ngModel)]="passwordRegister" />
+
+            <button (click)="printAll()">Register</button>
+        </div>
+        
+        <div>
+            <label for="emailLogin">Email</label>
+            <input id="emailLogin"type="text"  [(ngModel)]="emailLogin" />
+
+            <label for="passwordLogin">Password</label>
+            <input id="passwordLogin" type="text"  [(ngModel)]="passwordLogin" />
+            <button (click)="login()">Login</button>
+        </div>
+    </div>
+</div>

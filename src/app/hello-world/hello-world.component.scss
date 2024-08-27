@@ -1,0 +1,94 @@
+/* h1{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    color: #fff;
+    background: #31b;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    max-width: 200px;
+} */
+.mother{
+    margin: 0 auto;
+    width: 100%;
+    li{
+        display: block;
+        padding: 7px;
+        padding-bottom: 10px;
+        margin-top: 3px;
+        border: 2px solid rgb(0, 0, 0);
+        background:rgb(0, 0, 0);
+        color: white;
+        text-shadow: 0.5px 0.5px red;
+        border-radius: 7px;
+        span{
+            display: block;
+            border-radius: 7px;
+            float: right;
+            background: rgba(41, 20, 20, 0.699);
+            border: 2px solid white;
+            padding: 0px 5px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0.5px 0.5px red;
+        }
+    }
+
+    .newTask{
+        border: 2px solid black;
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.459);
+        margin-top: 20px;
+        padding: 30px;
+        input{
+            border-radius: 7px;
+            margin: 2px;
+            border: 2px solid black;
+        }
+        button{
+            border: 2px solid black;
+            border-radius: 7px;
+            background: rgb(255, 0, 0);
+            color: rgb(255, 255, 255);
+            text-shadow: 1px 1px #000;
+            margin: 2px;
+        }
+        .ripListBtn{
+            border: 2px solid rgb(255, 0, 0);
+            border-radius: 7px;
+            background: rgb(0, 0, 0);
+            color: rgb(255, 102, 0);
+            text-shadow: 1px 1px #ff0000;
+            margin: 2px;
+        }
+    }
+
+    .container{
+        background: rgba(37, 37, 37, 0.158);
+        display: flex;
+        justify-content: center;
+        ul{
+            padding-inline-start: 0px;
+        }
+    }
+
+    nav{
+        display: flex;
+        width: 100vw;
+        min-height: 50px;
+        align-items: center;
+        justify-content: center;
+        background: rgba(49, 49, 49, 0.295);
+        margin-top: 50px;
+        div{
+            display: block;
+            margin: 0px 3px;
+            padding: 10px;
+            background: rgba(29, 29, 29, 0.493);
+            p{
+                color: rgb(255, 255, 255);
+                text-shadow: 0.5px 0.5px black;
+            }
+        }
+    }
+}
