@@ -10,6 +10,13 @@ type users = {
   tasks:string
 }
 
+type registration = {
+  email:string,
+  name:string,
+  password:string
+  tasks:string
+}
+
 
 @Component({
   selector: 'app-home',
@@ -38,15 +45,43 @@ export class HomeComponent /* implements OnInit */{
                 );
   }
 
+  btnRegister(){
+    let nameR:string = this.nameRegister;
+    let emailR:string = this.emailRegister;
+    let passwordR:string = this.passwordRegister;
+    let tasks:string = '';
+
+    const objRegister:registration = {name: nameR, email:emailR, password: passwordR, tasks: ''};
+    
+    this.MyApiService.postRegistration(objRegister).subscribe({
+      next: (data: any) => {
+        console.log(data);
+        alert("user criado com sucesso!");
+      },
+      error: (error: any) => {
+        console.error('Erro ao cadastrar USER:', error);
+      }
+    });
+  }
+
+
+
   constructor(private MyApiService: MyapiService, private router: Router) { }
   login(){
     /* ngOnInit(): void { */
         this.MyApiService.getUser(this.emailLogin).subscribe({
-          next: (data: any) => {
+          next: (data: users) => {
             this.Users = data;
             if(this.Users.password == this.passwordLogin){
               this.loggedIn = true;
+              this.MyApiService.saveIdToNextPage(data.id);
+              this.MyApiService.saveNameToNextPage(data.name);
+              this.MyApiService.saveEmailToNextPage(data.email);
+              this.MyApiService.savePasswordToNextPage(data.password);
+              this.MyApiService.saveTaskToNextPage(data.tasks);
               this.router.navigate(['list']);
+            }else{
+              alert("Invalid Password!");
             }
           },
           error: (error: any) => {
