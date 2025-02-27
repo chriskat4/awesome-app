@@ -1,4 +1,9 @@
-"FRONT END" DO SITE TO-DO "'FULL STACK'"
+
+"FRONT END" DO SITE TO-DO "'FULLSTACK'"
+![listaTarefas](https://github.com/user-attachments/assets/8b2d009a-e1f7-47ed-8ce2-3263000635a1)
+![loginPageLista](https://github.com/user-attachments/assets/84cebe8d-e08f-402b-81ad-a82f72c14e98)
+
+
 
 
 
